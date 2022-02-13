@@ -34,5 +34,7 @@ public class Recipe {
 	@Column(name="MILCHIG_FLEISHIG_STATUS")
 	String milchigFleishigStatus;
 	
+	@Column(name="COURSE")
+	String course;
 	
 }
