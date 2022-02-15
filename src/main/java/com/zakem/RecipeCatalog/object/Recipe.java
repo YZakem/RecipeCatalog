@@ -29,12 +29,15 @@ public class Recipe {
 	Integer cookTime;
 	
 	@Column(name="INGREDIENTS")
-	List<String> ingredients;
+	List<Ingredient> ingredients;
 	
 	@Column(name="MILCHIG_FLEISHIG_STATUS")
 	String milchigFleishigStatus;
 	
 	@Column(name="COURSE")
 	String course;
+	
+	@Column(name="ALLERGY_STATUS")
+	List<String> allergyStatus;
 	
 }

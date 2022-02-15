@@ -25,4 +25,7 @@ public class Ingredient {
 	
 	@Column(name="MILCHIG_FLEISHIG_STATUS")
 	String milchigFleishigStatus;
+	
+	@Column(name="ALLERGY")
+	String allergy;
 }
