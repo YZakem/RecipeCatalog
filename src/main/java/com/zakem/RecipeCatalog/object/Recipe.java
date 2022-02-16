@@ -3,6 +3,7 @@ package com.zakem.RecipeCatalog.object;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,6 +30,7 @@ public class Recipe {
 	Integer cookTime;
 	
 	@Column(name="INGREDIENTS")
+	@ElementCollection
 	List<Ingredient> ingredients;
 	
 	@Column(name="MILCHIG_FLEISHIG_STATUS")
@@ -38,6 +40,7 @@ public class Recipe {
 	String course;
 	
 	@Column(name="ALLERGY_STATUS")
+	@ElementCollection
 	List<String> allergyStatus;
 	
 }
