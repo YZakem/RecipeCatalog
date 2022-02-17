@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.zakem.RecipeCatalog.object.Ingredient;
 
-public interface IngredientRepository extends CrudRepository<Ingredient, Integer> {
+public interface IngredientRepository extends CrudRepository<Ingredient, String> {
 
 	Optional<Ingredient> findByName(String name);
 	

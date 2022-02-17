@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.zakem.RecipeCatalog.object.Recipe;
 
-public interface RecipeRepository extends CrudRepository<Recipe, Integer> {
+public interface RecipeRepository extends CrudRepository<Recipe, String> {
 	
 	List<Recipe> findByCookTimeLessThanEqual(Integer cookTime);
 	

@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,11 +20,8 @@ public class IngredientController {
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
+	@Autowired
 	IngredientRepository ingredientRepository;
-	
-	public IngredientController(IngredientRepository ingredientRepository) {
-		this.ingredientRepository = ingredientRepository;
-	}
 	
 	@PostMapping("/add")
 	public ResponseEntity<?> addIngredient(@RequestBody Ingredient ingredient){
