@@ -28,7 +28,7 @@ public class RecipeController {
 		Optional<Recipe> recipeOptional = this.recipeRepository.findByName(recipe.getName());
 		if (recipeOptional.isPresent()) {
 			logger.info("A recipe called {} already exists", recipe.getName());
-			return ResponseEntity.badRequest().body(null);
+			return ResponseEntity.badRequest().body("Recipe already exists");
 		}
 		
 		Recipe newRecipe = this.recipeRepository.save(recipe);

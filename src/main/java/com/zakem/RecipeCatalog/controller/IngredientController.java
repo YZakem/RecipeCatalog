@@ -28,7 +28,7 @@ public class IngredientController {
 		Optional<Ingredient> ingredientOptional = this.ingredientRepository.findByName(ingredient.getName());
 		if (ingredientOptional.isPresent()) {
 			logger.info("Adding ingredient {} failed because already exists", ingredient.getName());
-			return ResponseEntity.badRequest().body(null);
+			return ResponseEntity.badRequest().body("Adding ingredient failed because it already exists");
 		}
 		
 		Ingredient newIngredient = this.ingredientRepository.save(ingredient);
